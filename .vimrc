@@ -8,3 +8,4 @@ set shiftwidth=4
 set hidden
 set backspace=start,indent,eol
 
+runtime macros/matchit.vim
