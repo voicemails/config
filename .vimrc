@@ -1,5 +1,6 @@
 set ttimeoutlen=0
 
+filetype plugin on
 filetype indent on
 
 set expandtab
