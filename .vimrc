@@ -1,5 +1,7 @@
 set ttimeoutlen=0
 
+filetype indent on
+
 set expandtab
 set autoindent
 set tabstop=4
