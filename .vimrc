@@ -15,12 +15,10 @@ runtime macros/matchit.vim
 
 function! HtmlElement()
     let l:opening = input("Tag: ")
-
     if strchars(l:opening) > 0
         let l:closing = split(l:opening, " ")[0]
         return ["<" . l:opening . ">", "</" . l:closing . ">"]
     endif
-
     return ["", ""]
 endfunction
 
@@ -31,7 +29,6 @@ function! HtmlInline()
         execute "normal! F>"
     endif
 endfunction
-nnoremap ><lt> :call HtmlInline()<CR>
 
 function! HtmlMultiline()
     let l:element = HtmlElement()
@@ -40,13 +37,11 @@ function! HtmlMultiline()
         execute "normal! k"
     endif
 endfunction
-nnoremap <lt>> :call HtmlMultiline()<CR>
 
 function! HtmlVoid()
     let l:element = HtmlElement()
     execute "normal! i" . l:element[0]
 endfunction
-nnoremap <lt>. :call HtmlVoid()<CR>
 
 function! HtmlSurround()
     let l:element = HtmlElement()
@@ -57,4 +52,8 @@ function! HtmlSurround()
         execute "normal! i" . l:element[0]
     endif
 endfunction
+
+nnoremap ><lt> :call HtmlInline()<CR>
+nnoremap <lt>> :call HtmlMultiline()<CR>
+nnoremap <lt>. :call HtmlVoid()<CR>
 vnoremap . <Esc>:call HtmlSurround()<CR>
