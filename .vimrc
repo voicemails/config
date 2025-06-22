@@ -47,9 +47,10 @@ function! HtmlSurround()
     let l:element = HtmlElement()
     if strchars(l:element[0]) > 0
         execute "normal! `>"
-        execute "normal! a" . l:element[1]
+        execute "normal! a" . "\n" . l:element[1]
         execute "normal! `<"
-        execute "normal! i" . l:element[0]
+        execute "normal! i" . l:element[0] . "\n"
+        execute "normal! k0V`>j=$"
     endif
 endfunction
 
