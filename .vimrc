@@ -1,3 +1,4 @@
+set noswapfile
 set ttimeoutlen=0
 
 filetype plugin on
