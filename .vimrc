@@ -59,3 +59,5 @@ nnoremap ><lt> :call HtmlInline()<CR>
 nnoremap <lt>> :call HtmlMultiline()<CR>
 nnoremap <lt>. :call HtmlVoid()<CR>
 vnoremap . <Esc>:call HtmlSurround()<CR>
+
+nnoremap _ :set spell!<CR>
