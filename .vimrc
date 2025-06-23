@@ -61,3 +61,22 @@ nnoremap <lt>. :call HtmlVoid()<CR>
 vnoremap . <Esc>:call HtmlSurround()<CR>
 
 nnoremap _ :set spell!<CR>
+
+syntax on
+set background=dark
+
+highlight clear Normal
+highlight clear Comment
+highlight clear Constant
+highlight clear Identifier
+highlight clear Statement
+highlight clear PreProc
+highlight clear Type
+highlight clear Special
+highlight clear Underlined
+highlight clear Ignore
+highlight clear Error
+highlight clear Todo
+
+highlight Comment ctermfg=Gray
+highlight link Todo Comment
