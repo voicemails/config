@@ -77,6 +77,10 @@ highlight clear Underlined
 highlight clear Ignore
 highlight clear Error
 highlight clear Todo
+highlight clear Search
 
 highlight Comment ctermfg=Gray
 highlight link Todo Comment
+
+set hlsearch
+highlight Search ctermfg=White ctermbg=DarkGray
