@@ -1,6 +1,7 @@
 set noswapfile
 set ttimeoutlen=0
 
+filetype plugin on
 filetype indent on
 
 set expandtab
@@ -45,12 +46,22 @@ endfunction
 
 function! HtmlSurround()
     let l:element = HtmlElement()
+    let l:delimiter = ""
     if strchars(l:element[0]) > 0
-        execute "normal! `>"
-        execute "normal! a" . "\n" . l:element[1]
         execute "normal! `<"
-        execute "normal! i" . l:element[0] . "\n"
-        execute "normal! k0V`>j=$"
+        let l:start = line(".")
+        execute "normal! `>"
+        let l:end = line(".")
+        let l:linecount = abs(l:start - l:end)
+        if l:linecount > 0
+            let l:delimiter = "\n"
+        endif
+        execute "normal! a" . l:delimiter . l:element[1]
+        execute "normal! `<"
+        execute "normal! i" . l:element[0] . l:delimiter
+        if l:linecount > 0
+            execute "normal! k0V`>j=$"
+        endif
     endif
 endfunction
 
