@@ -12,6 +12,8 @@ set shiftwidth=4
 set hidden
 set backspace=start,indent,eol
 
+set wildmenu
+
 packadd termdebug
 runtime macros/matchit.vim
 
