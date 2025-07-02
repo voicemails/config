@@ -12,6 +12,7 @@ set shiftwidth=4
 set hidden
 set backspace=start,indent,eol
 
+packadd termdebug
 runtime macros/matchit.vim
 
 function! HtmlElement()
