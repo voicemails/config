@@ -15,7 +15,7 @@ set backspace=start,indent,eol
 set wildmenu
 
 packadd termdebug
-set makeprg
+set makeprg=make
 
 runtime macros/matchit.vim
 
