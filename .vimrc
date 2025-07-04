@@ -75,7 +75,6 @@ nnoremap <lt>> :call HtmlMultiline()<CR>
 nnoremap <lt>. :call HtmlVoid()<CR>
 vnoremap . <Esc>:call HtmlSurround()<CR>
 
-nnoremap <C-J> :find<Space>
 nnoremap <C-/> :vimgrep /
 
 nnoremap _ :set spell!<CR>
