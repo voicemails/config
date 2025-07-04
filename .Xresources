@@ -6,6 +6,7 @@ XTerm*faceSize: 13
 XTerm*scrollBar: false
 
 XTerm*disallowedWindowOps: 20,21,SetXprop
+XTerm*metaSendsEscape: true
 
 XTerm*selectToClipboard: true
 XTerm*VT100.Translations: #override \
