@@ -5,7 +5,10 @@ XTerm*faceName: Monospace
 XTerm*faceSize: 13
 XTerm*scrollBar: false
 
-XTerm*selectToClipboard: false
+XTerm*disallowedWindowOps: 20,21,SetXprop
+
+XTerm*selectToClipboard: true
 XTerm*VT100.Translations: #override \
-      Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n\ 
-      Shift Ctrl<Key>C: copy-selection(CLIPBOARD)
+        Shift Ctrl<Key>C: copy-selection(CLIPBOARD) \n\ 
+        Shift Ctrl<Key>V: insert-selection(CLIPBOARD)
+
