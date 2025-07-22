@@ -98,4 +98,5 @@ highlight Comment ctermfg=Gray
 highlight link Todo Comment
 
 set hlsearch
+set incsearch
 highlight Search ctermfg=White ctermbg=DarkGray
