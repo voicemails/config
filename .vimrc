@@ -76,6 +76,7 @@ nnoremap <lt>. :call HtmlVoid()<CR>
 vnoremap . <Esc>:call HtmlSurround()<CR>
 
 nnoremap _ :set spell!<CR>
+autocmd FileType gitcommit setlocal spell
 
 syntax on
 set background=dark
