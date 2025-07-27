@@ -75,7 +75,10 @@ nnoremap <lt>> :call HtmlMultiline()<CR>
 nnoremap <lt>. :call HtmlVoid()<CR>
 vnoremap . <Esc>:call HtmlSurround()<CR>
 
-autocmd FileType gitcommit setlocal spell
+augroup spell
+    autocmd!
+    autocmd FileType gitcommit setlocal spell
+augroup END
 
 syntax on
 set background=dark
